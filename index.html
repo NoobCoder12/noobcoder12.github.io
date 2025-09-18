@@ -53,6 +53,25 @@
     <p class="email"><strong>myniewidoczni@gmail.com</strong></p>
 
     <p class="soon">Do zobaczenia wkrótce!</p>
+
+    <script>
+        function updateH1() {
+            
+            const h1 = document.querySelector('.headline h1');
+            let text = h1.textContent
+
+            if (window.innerWidth <= 768) {
+                h1.innerHTML = text.replace('Stowarzyszenie', 'Stowarzyszenie<br>');
+            } else {
+                h1.textContent = text;
+            }
+        }
+
+        updateH1();
+
+        window.addEventListener('resize', updateH1);
+
+    </script>
 </body>
 
 </html>
